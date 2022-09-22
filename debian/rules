@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+include /usr/share/dpkg/default.mk
+export NODE_PATH = debian/node_modules:$(CURDIR)
+TMP=debian/tmp/usr/share/nodejs/autoprefixer
+
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+export DH_RUBY = --gem-install
+
+%:
+	dh $@ --with nodejs --package=node-autoprefixer
+	dh $@ --buildsystem=ruby --with ruby --package=ruby-autoprefixer-rails
+
+override_dh_auto_install:
+	dh_auto_install -O--buildsystem=ruby -O--with=ruby \
+	-O--package=ruby-autoprefixer-rails --destdir=debian/ruby-autoprefixer-rails

@@ -1,0 +1,4 @@
+cd ../build
+mkdir -p node_modules && \
+ln -s ../../autoprefixer node_modules && \
+rollup -c

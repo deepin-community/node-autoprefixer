@@ -1,0 +1,71 @@
+Source: node-autoprefixer
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-browserslist
+ , node-caniuse-lite (>= 1.0.30001260~)
+ , node-colorette
+ , node-normalize-range (>= 0.1.2-2~)
+ , node-postcss (>= 8.0~)
+ , node-postcss-value-parser (>= 4.1~)
+ , node-rollup-plugin-alias
+ , node-rollup-plugin-commonjs (>= 15.0~)
+ , node-rollup-plugin-json (>= 4.1~)
+ , node-rollup-plugin-node-polyfills
+ , node-rollup-plugin-node-resolve (>= 11~)
+ , node-rollup-plugin-replace (>= 2.3.3~)
+ , rollup
+ , node-whatwg-url
+# for ruby-autoprefixer-rails binary
+ , gem2deb,
+ , rake
+ , ruby-rspec
+ , ruby-execjs (>= 2.7~)
+ , ruby-json
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-autoprefixer
+Vcs-Git: https://salsa.debian.org/js-team/node-autoprefixer.git
+Homepage: https://github.com/postcss/autoprefixer
+Rules-Requires-Root: no
+XS-Ruby-Versions: all
+
+Package: ruby-autoprefixer-rails
+Section: ruby
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-execjs (>= 2.7~),
+         ruby-json,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Rails integration for the autoprefixer tool
+ autoprefixer parse CSS and adds vendor prefixes to CSS rules based on browser
+ support for different features, by using data from "Can I Use" website.
+ .
+ This package integrates autoprefixer into the Rails asset pipeline.
+
+Package: node-autoprefixer
+Architecture: all
+Depends: ${misc:Depends}
+ , ${num2fraction:Depends}
+ , node-browserslist
+ , node-caniuse-lite (>= 1.0.30001260~)
+ , node-colorette
+ , node-normalize-range
+ , node-postcss (>= 8.0~)
+ , node-postcss-value-parser (>= 4.1~)
+ , nodejs
+Multi-Arch: foreign
+Description: add vendor prefixes to CSS rules
+ PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values
+ from the Can One Use website. It is recommended by Google and used in Twitter
+ and Taobao.
+ .
+ Write your CSS rules without vendor prefixes (in fact, forget about them
+ entirely).
+ .
+ Node.js is an event-based server-side JavaScript engine.

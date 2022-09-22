@@ -1,0 +1,192 @@
+node-autoprefixer (10.3.1.0+dfsg1+~cs14.6.19-2) unstable; urgency=medium
+
+  * Update minimum version of node-caniuse-lite (Closes: #995487)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 05 Oct 2021 01:45:22 +0530
+
+node-autoprefixer (10.3.1.0+dfsg1+~cs14.6.19-1) unstable; urgency=medium
+
+  * New upstream version 10.3.1.0+dfsg1+~cs14.4.7
+  * Add nanocolors as component
+  * New upstream version 10.3.1.0+dfsg1+~cs14.6.19
+  * Add copyright notice for nanocolors
+  * Refresh patches
+  * Add node-whatwg-url as a build dependency (for browser build)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Oct 2021 19:47:02 +0530
+
+node-autoprefixer (10.2.4.0+dfsg1+~cs14.2.17-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable
+  * Set upstream metadata fields: Bug-Submit
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright)
+  * Add ctype=nodejs to component(s)
+  * Fix GitHub tags regex
+
+ -- Yadd <yadd@debian.org>  Sun, 15 Aug 2021 11:59:48 +0200
+
+node-autoprefixer (10.2.4.0+dfsg1+~cs14.2.17-1) experimental; urgency=medium
+
+  * New upstream version 10.2.4.0+dfsg1+~cs14.2.17 (bullseye freeze)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 11 Mar 2021 18:48:47 +0530
+
+node-autoprefixer (10.1.0.0+dfsg1+~cs14.1.12-5) unstable; urgency=medium
+
+  * Really reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 Jan 2021 13:32:55 +0530
+
+node-autoprefixer (10.1.0.0+dfsg1+~cs14.1.12-4) experimental; urgency=medium
+
+  * Reupload to unstable
+  * Remove deprecated CustomResolveOptions from rollup.config.js
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Jan 2021 13:59:48 +0530
+
+node-autoprefixer (10.1.0.0+dfsg1+~cs14.1.12-3) experimental; urgency=medium
+
+  * Drop patch that moved polyfills plugin before commonjs
+    (this is fixed in node-rollup-plugin-node-resolve 11)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 18:15:55 +0530
+
+node-autoprefixer (10.1.0.0+dfsg1+~cs14.1.12-2) unstable; urgency=medium
+
+  [ Akshay S Dinesh ]
+  * feat: make build work (Closes: #977900)
+  * cleanup patch
+
+  [ Pirate Praveen ]
+  * Fix malformed patch
+  * Use build directory as additional component for auto build
+  * Simplify build script (remove linking to node_modules)
+  * Drop /usr/share/nodejs/browserslist/node_modules,
+    /usr/lib/nodejs from resolve and /usr/share/nodejs/postcss/node_modules
+    from resolve path in rollup.config.js (not needed now)
+  * Drop debian/node_modules (unused now)
+  * Use system path in replace plugin configuration
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 28 Dec 2020 14:02:17 +0530
+
+node-autoprefixer (10.1.0.0+dfsg1+~cs14.1.12-1) unstable; urgency=medium
+
+  * Build ruby-autoprefixer binary package (Closes: #978033)
+  * Exclude vendor from source package
+  * Switch to fraction.js component from num2fraction component
+  * Refactor packaging to make autoprefixer-rails as main source
+  * New upstream version 10.1.0.0+dfsg+~cs14.1.12
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 25 Dec 2020 17:52:20 +0530
+
+node-autoprefixer (10.1.0+~cs11.3.2.0-1) unstable; urgency=medium
+
+  * Drop colorette component (now provided by node-postcss)
+  * New upstream version 10.1.0+~cs1.2.2
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+  * Include autoprefixer-rails gem as component
+  * New upstream version 10.1.0+~cs11.3.2.0
+  * Adjust plugin order in rollup.config.js (Closes: #977900)
+    Use node-polyfills plugin before node-resolve and commonjs plugins
+  * Build using upstream rollup.config.js
+  * Exclude autoprefixer-rails component from binary package
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 25 Dec 2020 01:59:39 +0530
+
+node-autoprefixer (10.0.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Add custom paths to node-resolve plugin
+  * Add colorette as a component
+  * New upstream version 10.0.0
+  * Node module no longer require build with gulp or babel
+  * Take build configuration from autoprefixer-rails gem (Closes: #970550)
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * Drop unneeded version constraints from (build) dependencies
+  * Apply multi-arch hints
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 25 Oct 2020 07:16:34 +0100
+
+node-autoprefixer (9.8.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 9.8.0
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 23 May 2020 10:16:31 +0200
+
+node-autoprefixer (9.7.6-3) unstable; urgency=medium
+
+  * Really upload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 04 May 2020 06:49:15 +0530
+
+node-autoprefixer (9.7.6-2) experimental; urgency=medium
+
+  * Reupload to unstable (node-babel7 is in unstable now)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 03 May 2020 15:52:06 +0530
+
+node-autoprefixer (9.7.6-1) experimental; urgency=medium
+
+  * New upstream version 9.7.6
+  * Update dependencies (use babel 7)
+  * Drop patches (already applied upstream)
+  * Update build dependencies: Add node-gulp-rename and node-detect-indent
+  * Embed gulp-postcss module
+  * Update copyright for embedded modules
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 27 Apr 2020 16:53:58 +0530
+
+node-autoprefixer (8.6.5+repack-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Use uscan component instead of statically embedded num2fraction
+  * Use pkg-js-tools auto install instead of pkg-components (Closes: #933119)
+  * Declare compliance with policy 4.5.0
+  * Bump debhelper compatibility level to 12
+  * Fix build for gulp ≥ 4 (Closes: #954709)
+  * Make the build reproducible, thanks to Chris Lamb (Closes: #935361)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 23 Mar 2020 10:05:58 +0100
+
+node-autoprefixer (8.6.5-2) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.3.0
+  * Add upstream/metadata
+  * Fix debian/copyright format
+  * Use rollup to build browser bundle
+
+  [ Pirate Praveen ]
+  * Add libjs-autoprefixer binary to avoid depending on nodejs for the browser
+    bundle (since it also provides an executable, we cannot remove nodejs
+    dependency)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 07 Feb 2019 17:33:19 +0530
+
+node-autoprefixer (8.6.5-1) unstable; urgency=medium
+
+  [ Sruthi Chandran ]
+  * New upstream release
+
+  [ Pirate Praveen ]
+  * Add component in gbp.conf
+  * Tighten dependency on node-caniuse-lite
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 06 Jan 2019 13:30:31 +0530
+
+node-autoprefixer (7.2.5-1) unstable; urgency=medium
+
+  * Initial release (Closes: #881159)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 16 Oct 2018 15:07:17 +0530

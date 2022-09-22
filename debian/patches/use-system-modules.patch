@@ -1,0 +1,23 @@
+Use apt installed modules
+
+--- a/build/rollup.config.js
++++ b/build/rollup.config.js
+@@ -20,7 +20,7 @@
+     replace({
+       "colorette.enabled": "null",
+       "existsSync(": "void(",
+-      include: ["node_modules/postcss/lib/css-syntax-error.js", "node_modules/postcss/lib/previous-map.js"],
++      include: ["/usr/share/nodejs/postcss/lib/css-syntax-error.js", "/usr/share/nodejs/postcss/lib/previous-map.js"],
+       delimiters: ['', '']
+     }),
+     json(),
+@@ -37,7 +37,8 @@
+     nodeResolve({
+       browser: true,
+       preferBuiltins: false,
+-      extensions: [".mjs", ".js", ".json", ".node", ".es6"]
++      extensions: [".mjs", ".js", ".json", ".node", ".es6"],
++      moduleDirectories: ['node_modules','/usr/share/nodejs']
+     }),
+     nodePolyfills(),
+ 	inject({

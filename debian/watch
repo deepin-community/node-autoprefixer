@@ -1,0 +1,25 @@
+version=4
+opts=\
+dversionmangle=auto,pgpmode=none,\
+repack,compression=xz,repacksuffix=+dfsg1,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/autoprefixer-rails-$1.tar.gz/ \
+ https://github.com/ai/autoprefixer-rails/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=\
+dversionmangle=auto,ctype=nodejs,component=autoprefixer,\
+repack,compression=xz,repacksuffix=+dfsg1,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-autoprefixer-$1.tar.gz/ \
+ https://github.com/postcss/autoprefixer/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+dversionmangle=auto,ctype=nodejs,component=fractionjs,\
+repack,compression=xz,repacksuffix=+dfsg1,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-fraction.js-$1.tar.gz/ \
+ https://github.com/infusion/Fraction.js/tags .*/archive/.*/v?(4.[\d\.]+).tar.gz checksum
+
+opts=\
+component=nanocolors,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-nanocolors-$1.tar.gz/ \
+ https://github.com/ai/nanocolors/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

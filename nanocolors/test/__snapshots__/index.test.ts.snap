@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prints colors 1`] = `
+"[1mreset         [0mreset[0m
+bold          [1mbold[22m
+dim           [2mdim[22m
+italic        [3mitalic[23m
+underline     [4munderline[24m
+inverse       [7minverse[27m
+hidden        [8mhidden[28m
+strikethrough [9mstrikethrough[29m
+black         [30mblack[39m
+red           [31mred[39m
+green         [32mgreen[39m
+yellow        [33myellow[39m
+blue          [34mblue[39m
+magenta       [35mmagenta[39m
+cyan          [36mcyan[39m
+white         [37mwhite[39m
+gray          [90mgray[39m
+bgBlack       [40mbgBlack[49m
+bgRed         [41mbgRed[49m
+bgGreen       [42mbgGreen[49m
+bgYellow      [43mbgYellow[49m
+bgBlue        [44mbgBlue[49m
+bgMagenta     [45mbgMagenta[49m
+bgCyan        [46mbgCyan[49m
+bgWhite       [47mbgWhite[49m"
+`;
+
+exports[`supports nested colors 1`] = `"[32ma [31mb[32m c[39m"`;
+
+exports[`supports nested colors 2`] = `"[1mb [31mr [2md[22m[1m r[39m b[22m"`;

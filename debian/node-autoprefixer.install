@@ -1,0 +1,6 @@
+autoprefixer/package.json usr/share/nodejs/autoprefixer
+autoprefixer/lib usr/share/nodejs/autoprefixer
+autoprefixer/data usr/share/nodejs/autoprefixer
+autoprefixer/bin usr/share/nodejs/autoprefixer
+fractionjs/* usr/share/nodejs/autoprefixer/node_modules/fraction.js
+nanocolors/* usr/share/nodejs/autoprefixer/node_modules/nanocolors
